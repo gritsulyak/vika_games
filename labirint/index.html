@@ -67,6 +67,9 @@
   .tagline{margin:0;font-size:clamp(14px,2.1vw,19px);color:#c7bfea;max-width:36ch;line-height:1.45}
   .tips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:6px}
   .tip{background:rgba(255,255,255,.06);border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;color:#cbc3ef}
+  .only-touch{display:none}
+  body.touch .only-touch{display:inline-block}
+  body.touch .only-mouse{display:none}
 
   /* ---------- creator ---------- */
   .bar{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:calc(14px + env(safe-area-inset-top)) 20px 14px}
@@ -225,7 +228,8 @@
     <div class="tips">
       <span class="tip">⭐ Собирай звёзды</span>
       <span class="tip">🚪 Открой дверь</span>
-      <span class="tip">🎮 Стрелки или WASD</span>
+      <span class="tip only-mouse">⌨️ Стрелки или WASD</span>
+      <span class="tip only-touch">👆 Веди героя пальцем</span>
     </div>
   </div>
 </section>
