@@ -31,8 +31,9 @@
     text-align:center;
   }
   .sub{margin:0 0 clamp(28px,5vh,48px);color:#c7bfea;font-size:clamp(14px,2vw,18px);text-align:center}
-  .grid{width:100%;max-width:880px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+  .grid{width:100%;max-width:880px;display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
   .card{
+    flex:0 1 340px;max-width:340px;
     display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;
     background:linear-gradient(180deg, rgba(92,72,180,.45), rgba(32,24,70,.55));
     border:1.5px solid rgba(255,255,255,.14);border-radius:26px;
