@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0d0b1e" />
+<title>Викины игры</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>" />
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%}
+  body{
+    font-family:"Nunito",ui-rounded,"Segoe UI",system-ui,-apple-system,sans-serif;
+    color:#f4efff;
+    background:
+      radial-gradient(1100px 800px at 12% -10%, #3d2b72 0%, transparent 60%),
+      radial-gradient(900px 700px at 105% 5%, #1b3d70 0%, transparent 55%),
+      radial-gradient(800px 700px at 50% 120%, #4b2350 0%, transparent 60%),
+      #0d0b1e;
+    min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;
+    padding:max(32px, 8vh) 20px 48px;
+    -webkit-tap-highlight-color:transparent;
+  }
+  h1{
+    margin:0 0 10px;font-weight:900;letter-spacing:.04em;line-height:1;
+    font-size:clamp(40px,9vw,76px);
+    background:linear-gradient(180deg,#ffffff 0%,#ffe9a8 48%,#ffb347 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 14px 30px rgba(255,175,70,.30));
+    text-align:center;
+  }
+  .sub{margin:0 0 clamp(28px,5vh,48px);color:#c7bfea;font-size:clamp(14px,2vw,18px);text-align:center}
+  .grid{width:100%;max-width:880px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+  .card{
+    display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;
+    background:linear-gradient(180deg, rgba(92,72,180,.45), rgba(32,24,70,.55));
+    border:1.5px solid rgba(255,255,255,.14);border-radius:26px;
+    padding:24px;position:relative;overflow:hidden;
+    transition:transform .15s ease, box-shadow .25s ease, border-color .25s;
+    box-shadow:0 20px 40px -26px #000;
+  }
+  .card::after{
+    content:"";position:absolute;inset:-40% -60% auto auto;width:220px;height:220px;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,209,102,.28), transparent 65%);
+    pointer-events:none;
+  }
+  .card:hover{transform:translateY(-4px);border-color:rgba(255,209,102,.5);box-shadow:0 26px 50px -24px #000}
+  .card:active{transform:scale(.98)}
+  .ico{font-size:42px;line-height:1}
+  .name{font-size:24px;font-weight:900;letter-spacing:.02em}
+  .desc{color:#c4bbe8;font-size:14.5px;line-height:1.45}
+  .go{margin-top:12px;align-self:flex-start;background:linear-gradient(180deg,#ffe08a,#f7b731);color:#3b2703;
+      font-weight:800;border-radius:999px;padding:10px 20px;font-size:14px;
+      box-shadow:0 12px 26px -14px rgba(247,183,49,.9), inset 0 -3px 0 rgba(0,0,0,.14)}
+  footer{margin-top:auto;padding-top:40px;color:#7f76a8;font-size:12.5px}
+</style>
+</head>
+<body>
+  <h1>Викины игры</h1>
+  <p class="sub">Маленькие игры, сделанные с любовью</p>
+
+  <div class="grid">
+    <a class="card" href="./labirint/">
+      <span class="ico">🌀</span>
+      <span class="name">Лабиринт</span>
+      <span class="desc">Создай героя — мальчика или девочку, выбери причёску, глаза и одежду, а потом собирай звёзды и ищи выход из волшебного лабиринта.</span>
+      <span class="go">Играть →</span>
+    </a>
+  </div>
+
+  <footer>© Викины игры</footer>
+</body>
+</html>
